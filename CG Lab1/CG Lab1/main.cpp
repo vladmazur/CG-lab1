@@ -77,11 +77,14 @@ bool intersection(Point start1, Point end1, Point start2, Point end2, Point * ou
 }
 
 #include <iostream>
+using namespace::std;
+
+#warning add angle calculation
 
 int main(int argc, const char * argv[])
 {
     Point out;
-    std::cout << intersection(Point(2,2), Point(5,5), Point(0,0), Point(7,7), &out) << "\n";
-    std::cout << intersection(Point(2,2), Point(5,5), Point(2,5), Point(5,2), &out) << "\n";
+    cout << intersection(Point(2,2), Point(5,5), Point(0,0), Point(7,7), &out) << "\n";
+    cout << intersection(Point(2,2), Point(5,5), Point(2,5), Point(5,2), &out) << "\n";
 }
 
