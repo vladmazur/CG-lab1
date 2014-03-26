@@ -9,7 +9,20 @@
 /* Begin PBXBuildFile section */
 		C21E584618E0248800210CBB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C21E584518E0248800210CBB /* main.cpp */; };
 		C21E584818E0248800210CBB /* CG_Lab1.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C21E584718E0248800210CBB /* CG_Lab1.1 */; };
+		C21E585518E2E09B00210CBB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21E585418E2E09B00210CBB /* XCTest.framework */; };
+		C21E585B18E2E09B00210CBB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C21E585918E2E09B00210CBB /* InfoPlist.strings */; };
+		C21E585D18E2E09B00210CBB /* CG_Lab1_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E585C18E2E09B00210CBB /* CG_Lab1_Tests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C21E585F18E2E09B00210CBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C21E583A18E0248800210CBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C21E584118E0248800210CBB;
+			remoteInfo = "CG Lab1";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C21E584018E0248800210CBB /* CopyFiles */ = {
@@ -28,6 +41,12 @@
 		C21E584218E0248800210CBB /* CG Lab1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CG Lab1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21E584518E0248800210CBB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C21E584718E0248800210CBB /* CG_Lab1.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CG_Lab1.1; sourceTree = "<group>"; };
+		C21E585218E2E09B00210CBB /* CG Lab1 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CG Lab1 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21E585418E2E09B00210CBB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C21E585818E2E09B00210CBB /* CG Lab1 Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CG Lab1 Tests-Info.plist"; sourceTree = "<group>"; };
+		C21E585A18E2E09B00210CBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C21E585C18E2E09B00210CBB /* CG_Lab1_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CG_Lab1_Tests.m; sourceTree = "<group>"; };
+		C21E585E18E2E09B00210CBB /* CG Lab1 Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CG Lab1 Tests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +57,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C21E584F18E2E09B00210CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21E585518E2E09B00210CBB /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				C21E584418E0248800210CBB /* CG Lab1 */,
+				C21E585618E2E09B00210CBB /* CG Lab1 Tests */,
+				C21E585318E2E09B00210CBB /* Frameworks */,
 				C21E584318E0248800210CBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C21E584218E0248800210CBB /* CG Lab1 */,
+				C21E585218E2E09B00210CBB /* CG Lab1 Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +94,33 @@
 				C21E584718E0248800210CBB /* CG_Lab1.1 */,
 			);
 			path = "CG Lab1";
+			sourceTree = "<group>";
+		};
+		C21E585318E2E09B00210CBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C21E585418E2E09B00210CBB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C21E585618E2E09B00210CBB /* CG Lab1 Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C21E585C18E2E09B00210CBB /* CG_Lab1_Tests.m */,
+				C21E585718E2E09B00210CBB /* Supporting Files */,
+			);
+			path = "CG Lab1 Tests";
+			sourceTree = "<group>";
+		};
+		C21E585718E2E09B00210CBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C21E585818E2E09B00210CBB /* CG Lab1 Tests-Info.plist */,
+				C21E585918E2E09B00210CBB /* InfoPlist.strings */,
+				C21E585E18E2E09B00210CBB /* CG Lab1 Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +143,24 @@
 			productReference = C21E584218E0248800210CBB /* CG Lab1 */;
 			productType = "com.apple.product-type.tool";
 		};
+		C21E585118E2E09B00210CBB /* CG Lab1 Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C21E586118E2E09B00210CBB /* Build configuration list for PBXNativeTarget "CG Lab1 Tests" */;
+			buildPhases = (
+				C21E584E18E2E09B00210CBB /* Sources */,
+				C21E584F18E2E09B00210CBB /* Frameworks */,
+				C21E585018E2E09B00210CBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C21E586018E2E09B00210CBB /* PBXTargetDependency */,
+			);
+			name = "CG Lab1 Tests";
+			productName = "CG Lab1 Tests";
+			productReference = C21E585218E2E09B00210CBB /* CG Lab1 Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +169,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Vlad Mazur";
+				TargetAttributes = {
+					C21E585118E2E09B00210CBB = {
+						TestTargetID = C21E584118E0248800210CBB;
+					};
+				};
 			};
 			buildConfigurationList = C21E583D18E0248800210CBB /* Build configuration list for PBXProject "CG Lab1" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -108,9 +188,21 @@
 			projectRoot = "";
 			targets = (
 				C21E584118E0248800210CBB /* CG Lab1 */,
+				C21E585118E2E09B00210CBB /* CG Lab1 Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C21E585018E2E09B00210CBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21E585B18E2E09B00210CBB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C21E583E18E0248800210CBB /* Sources */ = {
@@ -121,7 +213,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C21E584E18E2E09B00210CBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21E585D18E2E09B00210CBB /* CG_Lab1_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C21E586018E2E09B00210CBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C21E584118E0248800210CBB /* CG Lab1 */;
+			targetProxy = C21E585F18E2E09B00210CBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C21E585918E2E09B00210CBB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C21E585A18E2E09B00210CBB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C21E584918E0248800210CBB /* Debug */ = {
@@ -208,6 +327,40 @@
 			};
 			name = Release;
 		};
+		C21E586218E2E09B00210CBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CG Lab1 Tests/CG Lab1 Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CG Lab1 Tests/CG Lab1 Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C21E586318E2E09B00210CBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CG Lab1 Tests/CG Lab1 Tests-Prefix.pch";
+				INFOPLIST_FILE = "CG Lab1 Tests/CG Lab1 Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -225,6 +378,14 @@
 			buildConfigurations = (
 				C21E584C18E0248800210CBB /* Debug */,
 				C21E584D18E0248800210CBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C21E586118E2E09B00210CBB /* Build configuration list for PBXNativeTarget "CG Lab1 Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21E586218E2E09B00210CBB /* Debug */,
+				C21E586318E2E09B00210CBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
