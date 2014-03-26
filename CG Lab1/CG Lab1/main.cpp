@@ -70,6 +70,24 @@ struct Interval {
     }
 };
 
+struct Vector
+{
+    double x;
+    double y;
+    
+    Vector(double x, double y)
+    {
+        this->x = x;
+        this->y = y;
+    }
+    
+    Vector(Interval inter)
+    {
+        x = inter.end.x - inter.start.x;
+        y = inter.end.y - inter.start.y;
+    }
+};
+
 bool intersection(Point start1, Point end1, Point start2, Point end2, Point * out_intersection)
 {
     Point dir1 = end1 - start1;
@@ -108,7 +126,24 @@ bool intersection(Interval one, Interval two, Point * out_intersection)
 
 #warning add angle calculation
 
+void normalizeAngle(double * angle)
+{
+    while (*angle >= 360)
+        *angle -= 360;
+    while (*angle < 0)
+        *angle += 360;
+}
 
+double angle(Interval one, Interval two)
+{
+    Vector oneV(one);
+    Vector twoV(two);
+    double ang =  atan2( oneV.x * twoV.y - twoV.x * oneV.y, oneV.x * twoV.x + oneV.y * twoV.y);
+    ang *= 57.2;
+    normalizeAngle(&ang);
+    cout << ang << "\n";
+    return ang;
+}
 
 void testForIntersection(Interval one, Interval two, bool expectedResult)
 {
@@ -146,6 +181,13 @@ void test()
     testForIntersection(Interval(Point(2,2), Point(5,5)),
                         Interval(Point(3,3), Point(4,4)),
                         false);
+    
+    // -45 deg is 315 deg:
+    angle(Interval(Point(2,2), Point(5,5)),
+          Interval(Point(0,0), Point(3,0)));
+    //
+    angle(Interval(Point(2,2), Point(5,5)),
+          Interval(Point(-2,2), Point(-5,5)));
 }
 
 int main(int argc, const char * argv[])
