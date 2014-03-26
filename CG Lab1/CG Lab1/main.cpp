@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Vlad Mazur. All rights reserved.
 //
 
-#include <cmath>
-#include <iostream>
+#include <cmath> // atan2
+#include <iostream> // cout
 using namespace::std;
 
 struct Point {
