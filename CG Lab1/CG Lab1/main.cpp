@@ -24,11 +24,12 @@ void testForIntersection(Interval one, Interval two, bool expectedResult)
 void test()
 {
     testForIntersection(Interval(Point(2,2), Point(5,5)),
-                        Interval(Point(0,0), Point(7,7)),
-                        false);
-    testForIntersection(Interval(Point(2,2), Point(5,5)),
                         Interval(Point(2,5), Point(5,2)),
-                        true);
+                        true); // да
+    testForIntersection(Interval(Point(2,2), Point(3,3)),
+                        Interval(Point(4,7), Point(7,8)),
+                        false); // нет
+    
     
     // точка:
     testForIntersection(Interval(Point(2,2), Point(2,2)),
@@ -43,7 +44,12 @@ void test()
     // один входит в другой:
     testForIntersection(Interval(Point(2,2), Point(5,5)),
                         Interval(Point(3,3), Point(4,4)),
-                        false);
+                        true);
+    
+    // пересекаются в вершине:
+    testForIntersection(Interval(Point(0,0), Point(2,0)),
+                        Interval(Point(0,0), Point(0,-4)),
+                        true);
     
     // -45 deg is 315 deg:
     angle(Interval(Point(2,2), Point(5,5)),

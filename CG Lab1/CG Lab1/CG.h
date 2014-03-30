@@ -96,6 +96,12 @@ bool intersection(Point start1, Point end1, Point start2, Point end2, Point * ou
     Point dir1 = end1 - start1;
     Point dir2 = end2 - start2;
     
+        // есди один из торезков - точка: 
+    if( dir1.x == 0 && dir1.y == 0 )
+        return false;
+    if( dir2.x == 0 && dir2.y == 0 )
+        return false;
+    
         //считаем уравнения прямых проходящих через отрезки
     float a1 = -dir1.y;
     float b1 = +dir1.x;
@@ -113,7 +119,7 @@ bool intersection(Point start1, Point end1, Point start2, Point end2, Point * ou
     float seg2_line1_end = a1*end2.x + b1*end2.y + d1;
     
         //если концы одного отрезка имеют один знак, значит он в одной полуплоскости и пересечения нет.
-    if (seg1_line2_start * seg1_line2_end >= 0 || seg2_line1_start * seg2_line1_end >= 0)
+    if (seg1_line2_start * seg1_line2_end > 0 || seg2_line1_start * seg2_line1_end > 0)
         return false;
     
     float u = seg1_line2_start / (seg1_line2_start - seg1_line2_end);
