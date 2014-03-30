@@ -47,6 +47,7 @@
 		C21E585A18E2E09B00210CBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C21E585C18E2E09B00210CBB /* CG_Lab1_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CG_Lab1_Tests.m; sourceTree = "<group>"; };
 		C21E585E18E2E09B00210CBB /* CG Lab1 Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CG Lab1 Tests-Prefix.pch"; sourceTree = "<group>"; };
+		C21E587918E89D6700210CBB /* CG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CG.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				C21E584518E0248800210CBB /* main.cpp */,
+				C21E587918E89D6700210CBB /* CG.h */,
 				C21E584718E0248800210CBB /* CG_Lab1.1 */,
 			);
 			path = "CG Lab1";
